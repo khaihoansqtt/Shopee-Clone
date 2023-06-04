@@ -1,0 +1,117 @@
+
+/* Mobile and Tablet */
+@media (max-width: 1023px) {
+    :root {
+        --header-height: 6.8rem;
+        --navbar-height: 0rem;
+    }
+
+    .hide-on-mobile-tablet {
+        display: none;
+    }
+
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 10;
+    }
+
+    .header__cart-list {
+        position: fixed;
+        top: var(--header-height);
+        left: 0;
+        right: 0;
+        width: auto;
+    }
+
+    .header__sort-bar {
+        display: flex;
+    }
+
+    .container {
+        margin-top: calc(var(--header-height) + var(--sort-bar-height));
+    }
+
+    .home-filter {
+        display: none;
+    }
+
+    .mobile-category {
+        display: block;
+    }
+
+    .pt-24px {
+        padding-top: 8px;
+    }
+}
+/* Mobile */
+@media (max-width: 739px) {
+    .hide-on-mobile {
+        display: none;
+    }
+
+    .header__mobile-search {
+        padding: 0 12px;
+        display: block;
+    }
+
+    .header__logo {
+        width: 120px;
+    }
+
+    .header__search {
+        position: fixed;
+        top: var(--header-height);
+        left: 0;
+        right: 0;
+        z-index: 1;
+        margin: 0;
+        padding: 0 12px;
+        height: var(--sort-bar-height);
+        width: 100%;
+    }
+
+    .header__search-history {
+        position: fixed;
+        top: calc(var(--header-height) + var(--sort-bar-height));
+        left: 0;
+        width: 100%;
+    }
+
+    .header__cart {
+        width: unset;
+        padding: 0 12px;
+    }
+
+    .pagination {
+        padding-left: 0;
+    }
+    
+    .pagination-item__link {
+        width: 28px;
+    }
+
+    .pagination-item + .pagination-item {
+        margin-left: 8px;
+    }
+
+    .copyright {
+        margin-top: 20px;
+    }
+}
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    .hide-on-tablet {
+        display: none;
+    }
+
+    .header__search {
+        margin: 0;
+    }
+
+    .header__cart {
+        text-align: right;
+    }
+}
